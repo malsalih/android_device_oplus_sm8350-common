@@ -92,17 +92,11 @@ BOARD_KERNEL_CMDLINE := \
     swiotlb=0 \
     ip6table_raw.raw_before_defrag=1 \
     iptable_raw.raw_before_defrag=1
+BOARD_KERNEL_BINARIES := kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-
-ifndef BOARD_PREBUILT_DTBOIMAGE
-BOARD_KERNEL_SEPARATED_DTBO := true
-endif
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_RAMDISK_USE_LZ4 := true
-TARGET_KERNEL_SOURCE ?= kernel/oplus/sm8350
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
-TARGET_KERNEL_NO_GCC := true
+USE_KERNEL_AOSP_LLVM := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
