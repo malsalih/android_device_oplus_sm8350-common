@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.lahaina:32
 	
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 QCV_FAMILY_SKUS := lahaina yupik
 PRODUCT_COPY_FILES += \
 $(foreach DEVICE_SKU, $(QCV_FAMILY_SKUS), \
